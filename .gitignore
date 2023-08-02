@@ -1,4 +1,24 @@
+# yarn ignore patterns (provided by yarn
+.yarn/*
+!.yarn/patches
+!.yarn/plugins
+!.yarn/releases
+!.yarn/sdks
+!.yarn/versions
+
+# Swap the comments on the following lines if you don't wish to use zero-installs
+# Documentation here: https://yarnpkg.com/features/zero-installs
+#!.yarn/cache
+.pnp.*
+
+# Next.js ignore patterns (don't check in secrets, but check in test vars)
 .next
 .env.local
 .env.*.local
 !.env.test.local
+
+# We're using nodeLinker: node-modules ("traditional" setup rather than PnP/zero-install)
+node_modules
+
+# Misc
+.DS_Store
